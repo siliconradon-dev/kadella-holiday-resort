@@ -10,7 +10,7 @@
     <meta name="description" content="HTML Template">
     <meta name="keywords" content="Html Template">
     <!-- page title -->
-    <title>Kedella Holiday Resort - Cabana and Resort Booking</title>
+    <title>Kedella Holiday Resort - Local Attractions</title>
     <!-- favicon icon -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
@@ -31,6 +31,44 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- style css -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom styles for Local Attraction page vertical cards */
+        .room-section-1 .room-item.vertical-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .room-section-1 .room-item.vertical-card .room-image {
+            max-width: 100%;
+            width: 100%;
+            height: 250px;
+            /* Fixed height for image consistency */
+        }
+
+        .room-section-1 .room-item.vertical-card .room-image figure {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius-three);
+            overflow: hidden;
+        }
+
+        .room-section-1 .room-item.vertical-card .room-image figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .room-section-1 .room-item.vertical-card .room-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -59,7 +97,7 @@
                         <img src="assets/images/logo/logo.png" alt="offcanvas logo">
                     </figure>
                 </div>
-                <!-- offcanvas logo emd -->
+                <!-- offcanvas logo end -->
                 <!-- offcanvas close start -->
                 <button type="button" class="offcanvas-close bg-transparent" data-bs-dismiss="offcanvas"
                     aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
@@ -75,8 +113,8 @@
                 <!-- menu outer end -->
                 <!-- offcanvas about start -->
                 <div class="offcanvas-about d-none d-xl-block">
-                    <p>There are many variations of passages available sure there majority have suffered alteration in
-                        some form by inject humour or randomised words which don't look even slightly believable.</p>
+                    <p>Discover the beauty of Sri Lanka with our curated list of local attractions nearby our resort.
+                    </p>
                 </div>
                 <!-- offcanvas about end -->
                 <!-- offcanvas contact start -->
@@ -108,7 +146,7 @@
                                         <i class="fa-solid fa-envelope"></i>
                                     </div>
                                     <div class="offcanvas-cta-content">
-                                        <a href="mailto:kedellaholidayresort@gmail.com">kedallahotel01@gmail.com</a>
+                                        <a href="mailto:kedellahotel01@gmail.com">kedellahotel01@gmail.com</a>
                                     </div>
                                 </div>
                                 <!-- offcanvas cta list end -->
@@ -273,8 +311,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <a href="room-list.html">Local Attraction</i></a>
-
+                                                    <a href="local-attraction.html">Local Attraction</a>
                                                 </li>
                                                 <li>
                                                     <a href="services.html">Services</a>
@@ -298,6 +335,7 @@
                                     </div>
                                 </div>
                                 <!-- header right end -->
+
                             </div>
                             <!-- header content end -->
                         </div>
@@ -321,14 +359,15 @@
                                 <div class="breadcrumb-content">
                                     <!-- breadcrumb title start -->
                                     <div class="breadcrumb-title wow fadeInUp" data-wow-delay=".2s">
-                                        <h1>Services List</h1>
+                                        <h1>Local Attractions</h1>
                                     </div>
                                     <!-- breadcrumb title end -->
                                     <!-- nav start -->
                                     <nav aria-label="breadcrumb" class="wow fadeInUp" data-wow-delay=".3s">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Services List</li>
+                                            <li class="breadcrumb-item active" aria-current="page">Local Attractions
+                                            </li>
                                         </ol>
                                     </nav>
                                     <!-- nav end -->
@@ -349,158 +388,244 @@
             </section>
             <!-- breadcrumb section end -->
 
-            <!-- services section two start -->
-            <section class="services-section-2 pt-100 md-pt-80 pb-70 md-pb-50">
+            <!-- attractions section start -->
+            <section class="room-section-1 pt-100 md-pt-80 pb-100 md-pb-80">
                 <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-lg-4">
-                            <div class="services-left-content sticky">
-                                <!-- section title start -->
-                                <div class="section-title mb-30">
-                                    <span class="sub-title">Our Services</span>
-                                    <h2>We provide services for you</h2>
-                                    <p>We're dedicated to helping you achieve and maintain beautiful, healthy eye. Trust
-                                        us to provide exceptional care tailored to you. Personalized, compassionate car
-                                    </p>
+                    <div class="row">
+                        <!-- Elahera Amuna -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".2s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/reservoir.png" alt="Elahera Amuna">
+                                    </figure>
                                 </div>
-                                <!-- section title end -->
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Elahera Amuna</h2>
+                                        <p>A historic agricultural site demonstrating ancient engineering marvels,
+                                            located just 10km away.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>10 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-7">
-                            <!-- services item start 
-                            <div class="services-item">
-                                <div class="services-image">
-                                    <a href="services-details.html">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/services/gym-center-1.jpg" alt="gym center">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="services-content">
-                                    <div class="services-content-text">
-                                        <h3 class="services-title line-anime"><a href="services-details.html">Gym
-                                                Center</a></h3>
-                                        <p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the
-                                            nesudea seneoice misuscipit non sagie.</p>
-                                    </div>
-                                    <div class="services-button-wapper">
-                                        <a href="services-details.html" class="theme-button style-1"
-                                            aria-label="View Services">
-                                            View Services
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            services item end -->
-                            <!-- services item start -->
-                            <div class="services-item">
-                                <div class="services-image">
-                                    <a href="services-details.html">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/services/spa-massage-1.jpg" alt="spa and massage">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="services-content">
-                                    <div class="services-content-text">
-                                        <h3 class="services-title line-anime"><a href="services-details.html">Ayurvedic
-                                                Healing Therapies</a></h3>
-                                        <p>Experience traditional Ayurvedic treatments using natural herbal oils
-                                            to detoxify, rejuvenate, and relax your body naturally.</p>
-                                    </div>
-                                    <div class="services-button-wapper">
-                                        <a href="services-details.html" class="theme-button style-1"
-                                            aria-label="View Services">
-                                            View Services
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- services item end -->
-                            <!-- services item start -->
-                            <div class="services-item">
-                                <div class="services-image">
-                                    <a href="services-details.html">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/services/swimming-pool.jpg" alt="swimming pool">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="services-content">
-                                    <div class="services-content-text">
-                                        <h3 class="services-title line-anime"><a href="services-details.html">Swimming
-                                                Pool</a></h3>
-                                        <p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the
-                                            nesudea seneoice misuscipit non sagie.</p>
-                                    </div>
-                                    <div class="services-button-wapper">
-                                        <a href="services-details.html" class="theme-button style-1"
-                                            aria-label="View Services">
-                                            View Services
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- services item end -->
-                            <!-- services item start -->
-                            <div class="services-item">
-                                <div class="services-image">
-                                    <a href="services-details.html">
-                                        <figure class="image-anime">
-                                            <img src="assets/images/services/restaurant-bar.jpg"
-                                                alt="restaurant and bar">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="services-content">
-                                    <div class="services-content-text">
-                                        <h3 class="services-title line-anime"><a href="services-details.html">Restaurant
-                                                &amp; Bar</a></h3>
-                                        <p>Restaurant inilla duiman at elit finibus viverra nec a lacus themo the
-                                            nesudea seneoice misuscipit non sagie.</p>
-                                    </div>
-                                    <div class="services-button-wapper">
-                                        <a href="services-details.html" class="theme-button style-1"
-                                            aria-label="View Services">
-                                            View Services
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- services item end -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- services section two end -->
 
-            <!-- subscribe section start -->
-            <section class="subscribe-section-1" data-img-src="assets/images/shape/bg-shape-1.png">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-xl-end">
-                        <div class="col-xl-6 col-lg-8">
-                            <!-- subscribe wapper start -->
-                            <div class="subscribe-wapper wow fadeInUp" data-wow-delay=".2s">
-                                <h2 class="mb-30 text-black">Subscribe to Receive Latest Offers</h2>
-                                <!-- subscribe form start -->
-                                <form action="#" class="subscribe-form" id="subscribe-form">
-                                    <div class="input-group">
-                                        <input type="text" id="emailid" name="emailid" placeholder="Enter your email"
-                                            autocomplete="off" required="required">
+                        <!-- Kumara Ella -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".3s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/waterfall.png" alt="Kumara Ella">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Kumara Ella</h2>
+                                        <p>A breathtaking waterfall surrounded by lush greenery, perfect for a nature
+                                            trek.</p>
                                     </div>
-                                    <button type="submit" class="submit-btn" data-text="subscribe"
-                                        aria-label="subscribe">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                    </button>
-                                </form>
-                                <!-- subscribe form end -->
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>10 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!-- subscribe wapper end -->
+                        </div>
+
+                        <!-- Buduruwayaya -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".4s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/temple.png" alt="Buduruwayaya">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Buduruwayaya</h2>
+                                        <p>An ancient site known for its historic standing Buddha statue carved into
+                                            rock.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>10 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kiri Amma Ulpatha -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".5s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/mountain.png" alt="Kiri Amma Ulpatha">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Kiri Amma Ulpatha</h2>
+                                        <p>A natural spring site with cultural significance and serene surroundings.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>14 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wasgamuwa -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".6s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/safari.png" alt="Wasgamuwa National Park">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Wasgamuwa National Park</h2>
+                                        <p>Famous for its large herds of elephants and diverse wildlife. A must-visit
+                                            for nature lovers.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>40 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kalu Ganga Reservoir -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".7s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/reservoir.png" alt="Kalu Ganga Reservoir">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Kalu Ganga Reservoir</h2>
+                                        <p>A massive reservoir offering scenic views and a peaceful atmosphere for
+                                            relaxation.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>15 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Moragahakanda Reservoir -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".8s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/reservoir.png"
+                                            alt="Moragahakanda Reservoir">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Moragahakanda Reservoir</h2>
+                                        <p>The largest reservoir in the region, ideal for boat rides and enjoying the
+                                            sunset.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>10 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Riveston -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".9s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/mountain.png" alt="Riveston">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Riveston</h2>
+                                        <p>A popular hiking destination with windy peaks and stunning panoramic views of
+                                            the Knuckles rang.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>75 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sera Ella -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".95s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/waterfall.png" alt="Sera Ella">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Sera Ella</h2>
+                                        <p>A unique waterfall where you can walk behind the curtain of water. A magical
+                                            experience.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>35 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dambulu Viharaya -->
+                        <div class="col-lg-4 col-md-6 mb-30">
+                            <div class="room-item wow fadeInUp" data-wow-delay=".95s">
+                                <div class="room-image">
+                                    <figure class="image-anime">
+                                        <img src="assets/images/attractions/temple.png" alt="Dambulu Viharaya">
+                                    </figure>
+                                </div>
+                                <div class="room-content">
+                                    <div class="room-content-top">
+                                        <h2 class="line-anime">Dambulu Viharaya</h2>
+                                        <p>A UNESCO World Heritage site featuring ancient cave temples and
+                                            well-preserved murals.</p>
+                                    </div>
+                                    <div class="room-content-bottom">
+                                        <div class="room-price">
+                                            <p>40 km away</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- subscribe section end -->
+            <!-- attractions section end -->
+
         </main>
         <!-- main end -->
 
@@ -629,7 +754,7 @@
                                             <li>
                                                 <p>
                                                     <i class="fa-solid fa-envelope"></i>
-                                                    kedellaholidayresort@gmail.com
+                                                    kedellahotel01@gmail.com
                                                 </p>
                                             </li>
                                             <li>
