@@ -15,7 +15,7 @@
     <meta property="og:title" content="Kedella Holiday Resort - Cabana and Resort Booking">
     <meta property="og:description"
         content="Book your dream cabana at Kedella Holiday Resort. At our cabanas, luxury is more than just a word—it's a tradition.">
-    <meta property="og:image" content="https://www.kedellaholidayresort.com/assets/images/logo.png">
+    <meta property="og:image" content="https://www.kedellaholidayresort.com/assets/images/logo/logo.png">
     <!-- page title -->
     <title>Kedella Holiday Resort - Local Attractions</title>
     <!-- favicon icon -->
@@ -40,19 +40,27 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Custom styles for Local Attraction page vertical cards */
+        /* Custom styles for Local Attraction page vertical cards */
         .room-section-1 .room-item.vertical-card {
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            padding: 20px;
-            height: 100%;
+            gap: 15px;
+            /* Reduced gap */
+            padding: 15px;
+            /* Reduced padding */
+            height: 510px;
+            /* Fixed height for uniformity */
+            position: relative;
         }
 
         .room-section-1 .room-item.vertical-card .room-image {
             max-width: 100%;
             width: 100%;
-            height: 250px;
+            height: 200px;
+            /* Reduced image height */
             /* Fixed height for image consistency */
+            flex-shrink: 0;
+            /* Prevent image shrinking */
         }
 
         .room-section-1 .room-item.vertical-card .room-image figure {
@@ -72,8 +80,49 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
+            gap: 5px;
+            /* Reduced content gap */
             flex-grow: 1;
+            /* overflow: hidden; Removed to allow absolute positioning context if needed, but inner clamp handles text */
+        }
+
+        .room-section-1 .room-item.vertical-card .room-content .room-content-top {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+
+        /* Clamp description text to 3 lines */
+        .room-section-1 .room-item.vertical-card .room-content .room-content-top p {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            /* Increased to 4 lines for better fit with new height */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Position distance text at the bottom of the card content */
+        .room-section-1 .room-item.vertical-card .room-content .room-content-bottom {
+            margin-top: auto;
+            position: relative;
+            background: transparent;
+            padding: 0;
+            top: auto;
+            left: auto;
+        }
+
+        .room-section-1 .room-price p {
+            color: var(--color-one);
+            /* Reset to theme color */
+            font-size: 16px;
+            /* Restore standard size */
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        /* Center the grid items so the last single card is centered */
+        .room-section-1 .row {
+            justify-content: center;
         }
     </style>
 </head>
@@ -398,9 +447,9 @@
             <!-- attractions section start -->
             <section class="room-section-1 pt-100 md-pt-80 pb-100 md-pb-80">
                 <div class="container">
-                    <div class="row">
+                    <div class="row g-1">
                         <!-- Elahera Amuna -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".2s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -410,8 +459,12 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Elahera Amuna</h2>
-                                        <p>A historic agricultural site demonstrating ancient engineering marvels,
-                                            located just 10km away.</p>
+                                        <p>Elahera Amuna is a historic agricultural site showcasing ancient engineering
+                                            marvels.
+                                            Visitors can explore traditional irrigation systems,
+                                            appreciate historical significance, and enjoy the serene landscape,
+                                            located just 10 km away.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -423,7 +476,7 @@
                         </div>
 
                         <!-- Kumara Ella -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".3s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -433,8 +486,11 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Kumara Ella</h2>
-                                        <p>A breathtaking waterfall surrounded by lush greenery, perfect for a nature
-                                            trek.</p>
+                                        <p>Kumara Ella is a breathtaking waterfall nestled amidst lush green forests,
+                                            offering a serene escape. Visitors can enjoy nature treks, peaceful
+                                            surroundings,
+                                            and the refreshing mist of the cascading water.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -446,7 +502,7 @@
                         </div>
 
                         <!-- Buduruwayaya -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".4s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -456,8 +512,11 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Buduruwayaya</h2>
-                                        <p>An ancient site known for its historic standing Buddha statue carved into
-                                            rock.</p>
+                                        <p>Buduruwayaya is an ancient historical site famous for its magnificent
+                                            standing Buddha statue carved directly into solid rock.
+                                            learn about the rich cultural heritage preserved at this remarkable
+                                            location.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -469,7 +528,7 @@
                         </div>
 
                         <!-- Kiri Amma Ulpatha -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".5s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -479,7 +538,10 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Kiri Amma Ulpatha</h2>
-                                        <p>A natural spring site with cultural significance and serene surroundings.</p>
+                                        <p>Kiri Amma Ulpatha is a natural spring site with deep cultural significance.
+                                            Visitors can enjoy the serene surroundings, peaceful waters,
+                                            and connect with nature while learning about local traditions.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -491,7 +553,7 @@
                         </div>
 
                         <!-- Wasgamuwa -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".6s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -514,7 +576,7 @@
                         </div>
 
                         <!-- Kalu Ganga Reservoir -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".7s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -524,8 +586,11 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Kalu Ganga Reservoir</h2>
-                                        <p>A massive reservoir offering scenic views and a peaceful atmosphere for
-                                            relaxation.</p>
+                                        <p>Kalu Ganga Reservoir is a massive water body offering stunning scenic views
+                                            and a peaceful atmosphere.
+                                            Visitors can relax, enjoy nature, and admire the tranquil surroundings along
+                                            the reservoir.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -537,7 +602,7 @@
                         </div>
 
                         <!-- Moragahakanda Reservoir -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".8s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -548,8 +613,10 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Moragahakanda Reservoir</h2>
-                                        <p>The largest reservoir in the region, ideal for boat rides and enjoying the
-                                            sunset.</p>
+                                        <p>Moragahakanda Reservoir is the largest in the region,
+                                            offering opportunities for boat rides,
+                                            making it a perfect spot for nature lovers.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -561,7 +628,7 @@
                         </div>
 
                         <!-- Riveston -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".9s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -571,8 +638,10 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Riveston</h2>
-                                        <p>A popular hiking destination with windy peaks and stunning panoramic views of
-                                            the Knuckles rang.</p>
+                                        <p>Riveston is a popular hiking destination featuring windy peaks,
+                                            lush trails, and stunning panoramic views of the Knuckles Range,
+                                            attracting adventure seekers and nature enthusiasts alike.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -584,7 +653,7 @@
                         </div>
 
                         <!-- Sera Ella -->
-                        <div class="col-lg-4 col-md-6 mb-30">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".95s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -594,8 +663,11 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Sera Ella</h2>
-                                        <p>A unique waterfall where you can walk behind the curtain of water. A magical
-                                            experience.</p>
+                                        <p>Sera Ella is a unique waterfall where visitors can walk behind the cascading
+                                            curtain of water,
+                                            experience the magical surroundings, and enjoy the beauty of nature up
+                                            close.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
@@ -607,7 +679,7 @@
                         </div>
 
                         <!-- Dambulu Viharaya -->
-                        <div class="col-lg-4 col-md-6 mb-30 offset-lg-4">
+                        <div class="col-lg-4 col-md-6 mb-2">
                             <div class="room-item vertical-card wow fadeInUp" data-wow-delay=".95s">
                                 <div class="room-image">
                                     <figure class="image-anime">
@@ -617,8 +689,11 @@
                                 <div class="room-content">
                                     <div class="room-content-top">
                                         <h2 class="line-anime">Dambulu Viharaya</h2>
-                                        <p>A UNESCO World Heritage site featuring ancient cave temples and
-                                            well-preserved murals.</p>
+                                        <p>Dambulu Viharaya is a UNESCO World Heritage site showcasing ancient cave
+                                            temples,
+                                            intricate murals, and centuries-old religious artifacts,
+                                            offering visitors a glimpse into Sri Lanka’s rich cultural history.</p>
+
                                     </div>
                                     <div class="room-content-bottom">
                                         <div class="room-price">
